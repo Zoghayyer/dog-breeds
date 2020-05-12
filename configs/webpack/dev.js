@@ -1,7 +1,7 @@
 // development config
-const merge = require('webpack-merge')
-const webpack = require('webpack')
-const commonConfig = require('./common')
+const merge = require('webpack-merge');
+const webpack = require('webpack');
+const commonConfig = require('./common');
 
 module.exports = merge(commonConfig, {
   mode: 'development',
@@ -12,7 +12,8 @@ module.exports = merge(commonConfig, {
     './index.tsx', // the entry point of our app
   ],
   devServer: {
-    hot: true, // enable HMR on the server
+    hot: true, // enable HMR on the server,
+    historyApiFallback: true
   },
   devtool: 'cheap-module-eval-source-map',
   plugins: [
