@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Component) Loader renders without crashing 1`] = `
+<div
+  className="row d-flex justify-content-center className"
+>
+  <Spinner
+    animation="border"
+    className="loader-color"
+    role="status"
+    size="sm"
+  >
+    <span
+      className="sr-only"
+    >
+      Loading...
+    </span>
+  </Spinner>
+</div>
+`;

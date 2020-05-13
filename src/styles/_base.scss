@@ -1,0 +1,28 @@
+@import '../styles/variables';
+/**
+ * This is a generic scss file. It should include generic styles
+ * that multiple components use or overrides.
+ *
+*/
+a {
+  text-decoration: none !important;
+  color: $cornflower-blue;
+
+  &:hover {
+    color: $azure-radiance;
+  }
+}
+
+// bootstrap Button:
+.btn {
+  height: 36px;
+  border-radius: 4px;
+
+  &.btn-primary {
+    background-color: $cornflower-blue;
+    border: none;
+    &:hover {
+      background-color: $azure-radiance;
+    }
+  }
+}

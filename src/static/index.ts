@@ -3,5 +3,5 @@ import config from '../static/config';
 
 export {
   config,
-  icons
+  icons,
 };

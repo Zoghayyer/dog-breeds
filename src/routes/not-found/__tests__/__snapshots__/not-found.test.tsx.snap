@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Component) NotFound renders not found component 1`] = `
+<div
+  className="not-found"
+>
+  <div
+    className="mb-4"
+  >
+    <span
+      className="not-found-message"
+    >
+      Sorry! We couldn't find the page you were looking for.
+    </span>
+  </div>
+  <div>
+    <Link
+      className="navigation-link"
+      to="/"
+    >
+      <span>
+        Go to the main page
+      </span>
+    </Link>
+  </div>
+</div>
+`;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(View) AppView it renders the view component 1`] = `
+<Router
+  history={Object {}}
+>
+  <CoreView />
+</Router>
+`;

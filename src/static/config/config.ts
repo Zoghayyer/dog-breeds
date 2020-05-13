@@ -1,10 +1,10 @@
 const config = {
-  env: 'ED',
   api: {
     dog: {
-      url: 'https://dog.ceo/api/'
-    }
-  }
+      url: 'https://dog.ceo/api/',
+    },
+  },
+  env: 'ED',
 };
 
 export default config;

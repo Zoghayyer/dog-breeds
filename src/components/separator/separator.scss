@@ -1,0 +1,14 @@
+@import '../../styles/variables';
+
+.horizontal-separator {
+  width: 100%;
+  height: 2px;
+  background-color: $alto;
+  margin: 40px 0px;
+}
+
+.vertical-separator {
+  border-left: 2px solid $alto;
+  height: 500px;
+  width: 100%;
+}

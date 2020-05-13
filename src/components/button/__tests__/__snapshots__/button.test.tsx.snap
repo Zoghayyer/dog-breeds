@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Component) Button is rendered with primary class attributes when passed \`primary\` as a theme 1`] = `
+<button
+  className="btn btn-primary btn-sm className"
+  onClick={[Function]}
+  type="button"
+>
+  <div>
+    child
+  </div>
+</button>
+`;
+
+exports[`(Component) Button is rendered with secondary class attributes when passed \`secondary\` as a theme 1`] = `
+<button
+  className="btn btn-secondary btn-sm className"
+  onClick={[Function]}
+  type="button"
+>
+  <div>
+    child
+  </div>
+</button>
+`;
+
+exports[`(Component) Button is rendered with tertiary class attributes when passed \`tertiary\` as a theme 1`] = `
+<button
+  className="btn btn-tertiary btn-sm className"
+  onClick={[Function]}
+  type="button"
+>
+  <div>
+    child
+  </div>
+</button>
+`;
+
+exports[`(Component) Button renders a large button when passed size = \`lg\` 1`] = `
+<button
+  className="btn btn-primary btn-lg className"
+  onClick={[Function]}
+  type="button"
+>
+  <div>
+    child
+  </div>
+</button>
+`;

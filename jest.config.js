@@ -8,6 +8,7 @@ module.exports = {
   setupTestFrameworkScriptFile: 'jest-enzyme',
   testEnvironment: 'enzyme',
   transform: {
+    "^.+\\.jsx?$": "babel-jest",
     '^.+\\.tsx?$': 'ts-jest',
   },
 }

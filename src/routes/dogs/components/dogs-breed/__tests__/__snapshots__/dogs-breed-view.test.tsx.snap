@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(View) DogsBreedView renders DogBreed component for every dog in the dogs array 1`] = `
+<div
+  className="mt-4 image-card"
+>
+  <DogBreed
+    dog={
+      Object {
+        "alt": "dog number 0",
+        "favorite": false,
+        "id": 0,
+        "url": "fake-url-0",
+      }
+    }
+    handleClickFavorite={[Function]}
+    key="0-fake-url-0"
+  />
+  <DogBreed
+    dog={
+      Object {
+        "alt": "dog number 1",
+        "favorite": true,
+        "id": 1,
+        "url": "fake-url-1",
+      }
+    }
+    handleClickFavorite={[Function]}
+    key="1-fake-url-1"
+  />
+</div>
+`;

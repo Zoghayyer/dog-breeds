@@ -1,0 +1,40 @@
+@import '../../styles/variables';
+
+.dogs-container {
+  margin: 0 auto;
+  height: 100%;
+  width: 80%;
+  padding-top: 60px;
+
+  .dog-breeds-header {
+    display: flex;
+    justify-content: space-between;
+  
+    h1 {
+      font-weight: $font-lato-bold-weight;
+      font-size: $font-lg;
+      line-height: 33px;
+      font-style: normal;
+    }
+  }
+  
+  .favorites-header {
+    display: flex;
+    flex-direction: row;
+  
+    h1 {
+      font-size: $font-lg;
+      padding-left: 26px;
+      font-weight: $font-lato-bold-weight;
+      line-height: 16px;
+      font-style: normal;
+    }
+  }
+}
+
+.loader-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

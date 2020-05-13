@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`(Container) DogsContainer renders dogs view component if dogsBreedsAllGetIsLoading is false 1`] = `
+<DogsView
+  dogsBreedDogs={Array []}
+  favoriteDogs={Array []}
+  isLoading={false}
+  showLoadMore={false}
+/>
+`;
+
+exports[`(Container) DogsContainer renders the loader component if dogsBreedsAllGetIsLoading is true 1`] = `
+<Loader
+  className="loader-container"
+  size="sm"
+/>
+`;
