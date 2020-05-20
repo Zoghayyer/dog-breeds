@@ -3,21 +3,19 @@ import { shallow } from 'enzyme';
 import Image, { ImageProps } from '../image';
 
 describe('(Component) Image', () => {
-  let component;
   const defaultProps: ImageProps = {
     alt: 'My fake alt text',
-    className: '',
+    className: 'className',
     src: 'src',
+    style: {
+      fontSize: '10px',
+    },
   };
 
-  const shallowImage = (extendedProps: Partial<ImageProps> = {}) => {
-    component = shallow(<Image {...defaultProps} {...extendedProps} />);
-  };
-
-  beforeEach(() => shallowImage());
-
-  it('renders without crashing', () => {
-    shallow(<Image {...defaultProps} />);
-    expect(component).toMatchSnapshot();
+  it('renders an image with the correct props', () => {
+    const component  = shallow(<Image {...defaultProps} />);
+    expect(component.find('img')).toHaveLength(1);
+    expect(component.prop('alt')).toBe(defaultProps.alt);
+    expect(component.prop('style')).toBe(defaultProps.style);
   });
 });

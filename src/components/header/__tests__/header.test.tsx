@@ -3,20 +3,11 @@ import { shallow } from 'enzyme';
 import Header, { HeaderProps } from '../header';
 
 describe('(Component) Header', () => {
-  let component;
-  const defaultProps: HeaderProps = {
-    children: <div>child</div>,
-    className: 'className',
-  };
-
-  const shallowHeader = (extendedProps = {}) => {
-    component = shallow(<Header {...defaultProps} {...extendedProps} />);
-  };
-
-  beforeEach(() => shallowHeader());
-
-  it('renders without crashing', () => {
-    shallow(<Header><div id="child" /></Header>);
-    expect(component).toMatchSnapshot();
+  it('renders the correct children', () => {
+    const props: HeaderProps = {
+      children: <div className="child-1">Div</div>,
+    };
+    const component = shallow(<Header {...props} />);
+    expect(component.find('.child-1')).toHaveLength(1);
   });
 });

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { config as environmentConfig } from '../../static';
+import { config as environmentConfig } from '../../assets';
 
 // ------------------------------------
 // Environment api base urls

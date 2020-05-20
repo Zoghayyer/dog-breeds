@@ -1,31 +1,51 @@
 import React from 'react';
-
-type ButtonPropsTheme = 'primary' | 'secondary' | 'tertiary' | 'link';
+import styled from '@emotion/styled';
+import { colors, fonts } from '../../assets';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: any;
   className?: string;
   onClick?: () => (void);
-  size?: 'sm' | 'lg';
-  theme?: ButtonPropsTheme;
+  size?: 'sm';
   type?: 'button' | 'submit';
-  wide?: boolean;
+  style?: any;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, theme, size, className, type, onClick }) => (
-  <button
+const Button: React.FC<ButtonProps> = ({ children, size, style, className, type, onClick }) => (
+  <ButtonContainer
     type={type}
-    className={`btn btn-${theme} btn-${size} ${className}`}
+    style={style}
+    className={`generic-button ${buttonSizes[size || 'sm']} ${className || ''}`}
     onClick={onClick}
   >
     {children}
-  </button>
+  </ButtonContainer>
 );
 
-Button.defaultProps = {
-  size: 'sm',
-  theme: 'primary',
-  type: 'button',
+const buttonSizes = {
+  sm: {
+    height: '36px',
+    width: '109px',
+  },
 };
 
+const ButtonContainer = styled.button`
+  background-color: ${colors.cornflowerBlue};
+  border: none;
+  border-radius: 4px;
+  color: ${colors.white};
+  cursor: pointer;
+  display: inline-block;
+  font-size: ${fonts.fontSm};
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.375rem 0.75rem;
+  text-align: center;
+  user-select: none;
+  vertical-align: middle;
+
+  &:hover {
+    background-color: ${colors.azureRadiance};
+  }
+`;
 export default Button;

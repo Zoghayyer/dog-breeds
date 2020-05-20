@@ -3,20 +3,14 @@ import { shallow } from 'enzyme';
 import Loader, { LoaderProps } from '../loader';
 
 describe('(Component) Loader', () => {
-  let component;
   const defaultProps: LoaderProps = {
-    className: 'className',
-    size: 'sm',
+    style: {
+      width: '100%',
+    },
   };
 
-  const shallowLoader = (extendedProps: Partial<LoaderProps> = {}) => {
-    component = shallow(<Loader {...defaultProps} {...extendedProps} />);
-  };
-
-  beforeEach(() => shallowLoader());
-
-  it('renders without crashing', () => {
-    shallow(<Loader {...defaultProps} />);
-    expect(component).toMatchSnapshot();
+  it('has a loader component', () => {
+    const component = shallow(<Loader {...defaultProps} />);
+    expect(component.find('.loader')).toHaveLength(1);
   });
 });

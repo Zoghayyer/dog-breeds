@@ -6,8 +6,10 @@ describe('(Component) Icon', () => {
   let component;
   const defaultProps: IconProps = {
     alt: 'My fake alt text',
-    className: '',
     icon: 'redHeartIcon',
+    style: {
+      height: '100%',
+    },
   };
 
   const shallowIcon = (extendedProps: Partial<IconProps> = {}) => {
@@ -16,21 +18,17 @@ describe('(Component) Icon', () => {
 
   beforeEach(() => shallowIcon());
 
-  it('renders without crashing', () => {
-    shallow(<Icon {...defaultProps} />);
-    expect(component).toMatchSnapshot();
-  });
-
-  it('renders the correct icon', () => {
-    const wrapper = shallow(<Icon {...defaultProps} />);
-    expect(wrapper.prop('alt')).toBe(defaultProps.alt);
+  it('renders an image with the correct props', () => {
+    component = shallow(<Icon {...defaultProps} />);
+    expect(component.find('.img-icon')).toHaveLength(1);
+    expect(component.prop('alt')).toBe(defaultProps.alt);
   });
 
   it('calls onClick on icon click', () => {
     const onClickSpy = jest.fn();
     shallowIcon({ onClick: onClickSpy });
 
-    component.find('img').simulate('click');
+    component.find('.img-icon').simulate('click');
     expect(onClickSpy).toHaveBeenCalledTimes(1);
   });
 });

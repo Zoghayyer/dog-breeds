@@ -2,12 +2,12 @@ import React, { FC } from 'react';
 
 export interface HeaderProps {
   children: any;
-  className?: string;
+  style?: any;
 }
 
-const Header: FC<HeaderProps> = (props) => (
-  <div className={props.className}>
-    {props.children}
+const Header: FC<HeaderProps> = ({ children, style }) => (
+  <div style={style}>
+    {children}
   </div>
 );
 

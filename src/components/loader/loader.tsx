@@ -1,23 +1,22 @@
 import React from 'react';
-import Spinner from 'react-bootstrap/Spinner';
-import './loader.scss';
+import styled from '@emotion/styled';
+import { colors } from '../../assets/colors';
 
 export interface LoaderProps {
   className?: string;
-  size?: 'sm';
+  style?: any;
 }
 
-const Loader: React.FC<LoaderProps> = ({ className, size }) => (
-  <div className={`row d-flex justify-content-center ${className}`}>
-    <Spinner animation="border" role="status" className="loader-color" size={size}>
-      <span className="sr-only">Loading...</span>
-    </Spinner>
-  </div>
+const Loader: React.FC<LoaderProps> = ({ className, style }) => (
+  <LoaderContainer className="loader">
+    <div style={style} className={className}>Loading...</div>
+  </LoaderContainer>
 );
 
-Loader.defaultProps = {
-  className: '',
-  size: 'sm',
-};
+const LoaderContainer = styled.div({
+  color: colors.cornflowerBlue,
+  display: 'flex',
+  justifyContent: 'center',
+});
 
 export default Loader;

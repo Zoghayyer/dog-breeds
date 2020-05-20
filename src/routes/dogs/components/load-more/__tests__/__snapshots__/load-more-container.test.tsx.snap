@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`(Container) LoadMoreContainer renders LoadMoreView component 1`] = `
-<LoadMoreView
-  handleClick={[Function]}
-/>
-`;
