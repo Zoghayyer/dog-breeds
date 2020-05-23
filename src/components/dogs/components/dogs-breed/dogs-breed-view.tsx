@@ -33,6 +33,9 @@ const DogsBreedViewContainer = styled.div`
   @media ${devices.laptop} {
     grid-column-gap: 38px;
   }
+  @media (max-width: 1680px) {
+    grid-column-gap: 86px;
+  }
   @media ${devices.laptopS} {
     grid-column-gap: 109px;
   }
